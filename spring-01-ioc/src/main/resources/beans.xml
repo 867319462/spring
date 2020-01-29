@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--使用spring创建对象，在spring中这些都称为bean
+
+        java创建对象
+        类型 变量 = new 类型();
+        Hello hello = new Hello();
+
+        spring创建对象
+        bean = 对象
+        id = 变量名
+        class = new 的类型
+        name = 给bean添加别名，可以添加多个
+        property = 给对象设置一个值
+        name = 属性名
+        value = 值
+        ref = spring创建的一个对象
+    -->
+    <bean id="hello" class="pojo.Hello">
+        <!--属性与值或对象-->
+        <property name="string" value="HelloSpring" />
+    </bean>
+
+    <!--三种构造方法-->
+    <!--1.无参构造-->
+    <bean  id="user" class="pojo.User">
+        <property name="name" value="张三" />
+    </bean>
+    <!--2.有参构造（属性赋值）-->
+    <bean id="role" class="pojo.Role">
+        <constructor-arg name="name" value="程序员" />
+    </bean>
+    <!--3.有参构造（类型赋值）-->
+    <bean id="position" class="pojo.Position">
+        <constructor-arg type="java.lang.String" value="初级码农" />
+    </bean>
+    <!--4.有参构造（下标赋值）-->
+    <bean id="product" class="pojo.Product">
+        <constructor-arg index="0" value="java" />
+    </bean>
+
+    <!--给bean添加别名-->
+    <alias name="user" alias="user2" />
+</beans>
