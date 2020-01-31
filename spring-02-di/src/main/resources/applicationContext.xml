@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="pojo.Address">
+        <property name="address" value="山东" />
+    </bean>
+
+    <bean id="student" class="pojo.Student">
+        <!--第一种，普通注入，value-->
+        <property name="name" value="张三" />
+        <!--第二种，bean注入，ref-->
+        <property name="address" ref="address" />
+        <!--第三种，数组注入，array-->
+        <property name="books">
+           <array>
+               <value>《西游记》</value>
+               <value>《水浒传》</value>
+               <value>《红楼梦》</value>
+               <value>《三国演义》</value>
+           </array>
+        </property>
+        <!--第四种，list注入，list-->
+        <property name="hobbys">
+            <list>
+                <value>看小说</value>
+                <value>看视频</value>
+                <value>玩游戏</value>
+            </list>
+        </property>
+        <!--第五种，map注入，map-->
+        <property name="card">
+            <map>
+                <entry key="20200130" value="张三" />
+                <entry key="20200131" value="李四" />
+            </map>
+        </property>
+        <!--第六种，set注入，set-->
+        <property name="games">
+            <set>
+                <value>三国志</value>
+                <value>英雄联盟</value>
+                <value>炉石传说</value>
+            </set>
+        </property>
+        <!--第七种，配置注入，properties-->
+        <property name="info">
+            <props>
+                <prop key="driver">mySql</prop>
+                <prop key="url">http://127.0.0.1</prop>
+                <prop key="username">root</prop>
+                <prop key="password">123</prop>
+            </props>
+        </property>
+        <!--第八种，null注入，null-->
+        <property name="wife">
+            <null/>
+        </property>
+    </bean>
+
+</beans>

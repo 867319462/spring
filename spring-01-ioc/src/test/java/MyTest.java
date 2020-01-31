@@ -15,5 +15,8 @@ public class MyTest {
         // 对象都在spring中进行管理，需要使用，直接获取就可以了
         Hello hello = (Hello) context.getBean("hello");
         System.out.println(hello.toString());
+
+        Hello h1 = (Hello) context.getBean("h1");
+        System.out.println(h1 == hello);
     }
 }

@@ -15,12 +15,13 @@
         id = 变量名
         class = new 的类型
         name = 给bean添加别名，可以添加多个
+        scope = 作用域
         property = 给对象设置一个值
         name = 属性名
         value = 值
         ref = spring创建的一个对象
     -->
-    <bean id="hello" class="pojo.Hello">
+    <bean id="hello" class="pojo.Hello" name="h1 h2,h3;h4">
         <!--属性与值或对象-->
         <property name="string" value="HelloSpring" />
     </bean>
@@ -45,4 +46,7 @@
 
     <!--给bean添加别名-->
     <alias name="user" alias="user2" />
+
+    <!--合并多个配置为一个总的配置-->
+    <!--<import resource="beans.xml" />-->
 </beans>
