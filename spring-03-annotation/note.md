@@ -1,6 +1,6 @@
-##注解
+## 注解
 
-###开启注解
+### 开启注解
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -15,7 +15,7 @@
 
 </beans>
 ```
-###注解类型
+### 注解类型
 1. @Autowire  spring的注解，byName、byType的集合
 2. @Resource  java的注解，byName、byType的集合
 3. @Nullable  spring的注解，说明这个字段可以为null

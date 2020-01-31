@@ -1,6 +1,6 @@
-##java配置
+## java配置
 
-###1.添加POJO
+### 1.添加POJO
 
 ```java
 public class User {
@@ -17,7 +17,7 @@ public class User {
 }
 ```
 
-###2.添加基本配置
+### 2.添加基本配置
 
 ```java
 @Configuration
@@ -30,7 +30,7 @@ public class AppConfig {
 }
 ```
 
-###3.注解
+### 3.注解
 1. @Configuration spring注解 相对于之前的xml文件
 2. @Bean spring注解 相当于之前xml文件中的bean标签
 3. @ComponentScan spring注解 自动扫描包中的注解
